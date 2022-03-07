@@ -9,16 +9,24 @@
 ]
 
 // console.log(dataLists[1].age);
+function takeAlcohol(){
+    for(let dataList of dataLists){
+        if(dataList.age>=20){
+            console.log(`${dataList.name}さんにお酒を提供します。`)
+        }
+    }
+}
 
-for(let dataList of dataLists){
-    if(dataList.age>=20){
-        console.log(`${dataList.name}さんにお酒を提供します。`)
+function countPayment(){
+    for(let dataList of dataLists){
+        const adultPrice=3000;
+        if(dataList.age>=20){
+            console.log(`${dataList.name}さんのお勘定は${adultPrice}円です。`);
+        }else{
+            console.log(`${dataList.name}さんのお勘定は${adultPrice/2}円です。`)
+        }
     }
 }
-for(let dataList of dataLists){
-    if(dataList.age>=20){
-        console.log(`${dataList.name}さんのお勘定は3000円です。`);
-    }else{
-        console.log(`${dataList.name}さんのお勘定は1500円です。`)
-    }
-}
+
+takeAlcohol();
+countPayment();
